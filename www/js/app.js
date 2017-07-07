@@ -25,7 +25,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('app', {
+  .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
@@ -42,22 +42,142 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   })
 
   .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
+    url: '/browse',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/browse.html'
       }
-    })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
+    }
+  })
+  .state('app.home', {
+    url: '/home',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/home.html',
+        controller: 'HomeController'
       }
-    })
+    }
+  })
+
+  .state('app.brasil', {
+    url: '/brasil',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/brasil.html',
+        controller: 'BrasilController'
+      }
+    }
+  })
+
+  .state('app.argentina', {
+    url: '/argentina',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/argentina.html',
+        controller: 'ArgentinaController'
+      }
+    }
+  })
+
+  .state('app.canada', {
+    url: '/canada',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/canada.html',
+        controller: 'CanadaController'
+      }
+    }
+  })
+
+  .state('app.chile', {
+    url: '/chile',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/chile.html',
+        controller: 'ChileController'
+      }
+    }
+  })
+
+  .state('app.china', {
+    url: '/china',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/china.html',
+        controller: 'ChinaController'
+      }
+    }
+  })
+
+  .state('app.espanha', {
+    url: '/espanha',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/espanha.html',
+        controller: 'EspanhaController'
+      }
+    }
+  })
+
+  .state('app.estados-unidos', {
+    url: '/estados-unidos',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/estados-unidos.html',
+        controller: 'Estados-UnidosController'
+      }
+    }
+  })
+
+  .state('app.franca', {
+    url: '/franca',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/franca.html',
+        controller: 'FrancaController'
+      }
+    }
+  })
+
+  .state('app.italia', {
+    url: '/italia',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/italia.html',
+        controller: 'ItaliaController'
+      }
+    }
+  })
+
+  .state('app.mexico', {
+    url: '/mexico',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/mexico.html',
+        controller: 'MexicoController'
+      }
+    }
+  })
+
+  .state('app.portugal', {
+    url: '/portugal',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/portugal.html',
+        controller: 'PortugalController'
+      }
+    }
+  })
+
+  .state('app.siria', {
+    url: '/siria',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/siria.html',
+        controller: 'SiriaController'
+      }
+    }
+  })
 
   .state('app.single', {
     url: '/playlists/:playlistId',
@@ -69,5 +189,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/home');
 });

@@ -1,0 +1,7 @@
+<ion-view view-title="Home">
+  <ion-content>
+    <button ng-repeat="item in home" class="button button-outline button-block button-{{item.cor}}" ng-click="acessar(item.pagina)">
+      {{item.title}}
+    </button>
+  </ion-content>
+</ion-view>
