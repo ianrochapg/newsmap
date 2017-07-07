@@ -6,3 +6,7 @@ ion-content{
   color: white;
   text-align: center;
 }
+
+.button.button-outline.button-block img{
+  padding-left: 15px;
+}

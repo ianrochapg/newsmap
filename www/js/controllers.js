@@ -54,7 +54,7 @@ angular.module('starter.controllers', [])
     {id: 9, title: 'Itália', pagina: 'italia', cor: 'energized'},
     {id: 10, title: 'México', pagina: 'mexico', cor: 'balanced'},
     {id: 11, title: 'Portugal', pagina: 'portugal', cor: 'calm'},
-    {id: 12, title: 'Síria', pagina: 'siria', cor: 'positive'}
+    // {id: 12, title: 'Síria', pagina: 'siria', cor: 'positive'}
   ];
 
   $scope.acessar = function(pagina){
