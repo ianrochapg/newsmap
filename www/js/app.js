@@ -99,6 +99,38 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.chileglobo', {
+    url: '/chileglobo',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/chileglobo.html',
+        controller: 'ChilegloboController'
+      }
+    }
+  })
+
+  .state('app.chilefolha', {
+    url: '/chilefolha',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/chilefolha.html',
+        controller: 'ChilefolhaController'
+      }
+    }
+  })
+
+  .state('app.chileestadao', {
+    url: '/chileestadao',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/chileestadao.html',
+        controller: 'ChileestadaoController'
+      }
+    }
+  })
+
+
+
   .state('app.china', {
     url: '/china',
     views: {
@@ -123,8 +155,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/estados-unidos',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/estados-unidos.html',
-        controller: 'Estados-UnidosController'
+        templateUrl: 'templates/paises/eua.html',
+        controller: 'EUAController'
       }
     }
   })

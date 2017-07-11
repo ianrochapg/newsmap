@@ -1,5 +1,9 @@
 <ion-view view-title="Argentina">
   <ion-content class="pagina-pais">
     <h1>Argentina</h1>
+    <div ng-repeat="item in argentina" class="jornal">
+      <h3>{{item.jornal}}</h3>
+      <iframe width="100%" height="600" style="border:none;" ng-src={{item.link}}></iframe>
+    </div>
   </ion-content>
 </ion-view>

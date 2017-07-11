@@ -1,5 +1,8 @@
 <ion-view view-title="Chile">
-  <ion-content class="pagina-pais">
-    <h1>Chile</h1>
+  <ion-content class="pagina-news">
+    <button ng-repeat="item in chilenews" class="button button-outline button-block button-{{item.cor}}" ng-click="acessar(item.pagina)">
+      {{item.paper}}
+
+    </button>
   </ion-content>
 </ion-view>

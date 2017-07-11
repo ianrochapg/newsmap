@@ -10,3 +10,7 @@ ion-content{
 .button.button-outline.button-block img{
   padding-left: 15px;
 }
+
+iframe{
+  background-color: white;
+}

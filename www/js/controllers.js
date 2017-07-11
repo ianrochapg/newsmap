@@ -2,12 +2,6 @@ angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
 
   // Form data for the login modal
   $scope.loginData = {};
@@ -66,12 +60,39 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ArgentinaController', function($scope, $stateParams) {
+  $scope.argentina = [
+    {id: 1, jornal: 'La Prensa', link:'http://www.folha.uol.com.br/'},
+
+  ]
 })
 
-.controller('CanadaController', function($scope, $stateParams) {
+.controller('CanadaController', function($scope, $http) {
+  $scope.noticias = [];
+  $http.get('http://localhost:3000/canada').success(function(response){
+    $scope.noticias = response.data;
+  });
 })
 
-.controller('ChileController', function($scope, $stateParams) {
+
+.controller('ChileController', function($scope, $state) {
+  $scope.chilenews = [
+    {id: 1, paper: 'Folha', pagina: 'chilefolha', cor: 'royal'},
+    {id: 1, paper: 'Globo', pagina: 'chileglobo', cor: 'energized'},
+    {id: 1, paper: 'Estadão', pagina: 'chileestadao', cor: 'assertive'},
+  ];
+
+  $scope.acessar = function(pagina){
+    $state.go('app.'+pagina);
+  }
+})
+
+.controller('ChilegloboController', function($scope, $stateParams) {
+})
+
+.controller('ChilefolhaController', function($scope, $stateParams) {
+})
+
+.controller('ChileestadaoController', function($scope, $stateParams) {
 })
 
 .controller('ChinaController', function($scope, $stateParams) {
@@ -80,7 +101,7 @@ angular.module('starter.controllers', [])
 .controller('EspanhaController', function($scope, $stateParams) {
 })
 
-.controller('Estados-UnidosController', function($scope, $stateParams) {
+.controller('EUAController', function($scope, $stateParams) {
 })
 
 .controller('FrancaController', function($scope, $stateParams) {
