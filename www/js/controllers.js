@@ -69,7 +69,7 @@ angular.module('starter.controllers', [])
 .controller('CanadaController', function($scope, $http) {
   $scope.noticias = [];
   $http.get('http://localhost:3000/canada').success(function(response){
-    $scope.noticias = response.data;
+    $scope.noticias = response;
   });
 })
 

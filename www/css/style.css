@@ -14,3 +14,7 @@ ion-content{
 iframe{
   background-color: white;
 }
+
+.title.title-center.header-item{
+  font-size: 25px;
+}
