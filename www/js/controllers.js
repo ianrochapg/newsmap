@@ -164,9 +164,9 @@ que eu quero que seja repetida dentro do $interval. Exemplo:
 
 .controller('EUAController', function($scope, $state) {
   $scope.eua = [
-    {id: 1, paper: 'NYT', pagina: 'nyt', cor: 'royal'},
-    {id: 1, paper: 'Reuters', pagina: '', cor: 'energized'},
-    {id: 1, paper: 'Estadão', pagina: 'chileestadao', cor: 'assertive'},
+    {id: 1, paper: 'The New York times', pagina: 'nyt', cor: 'royal'},
+    {id: 1, paper: 'Reuters', pagina: 'reuters', cor: 'energized'},
+    {id: 1, paper: 'The Chicago Tribune', pagina: 'tribune', cor: 'assertive'},
   ];
   $scope.acessar = function(pagina){
     $state.go('app.'+pagina);
