@@ -72,6 +72,9 @@ angular.module('starter.controllers', [])
     $scope.noticias = response;
   });
 })
+/*Passar '$interval' como parâmetro na função e colocar a função
+que eu quero que seja repetida dentro do $interval. Exemplo:
+"$interval()"*/
 
 
 .controller('ChileController', function($scope, $state) {
