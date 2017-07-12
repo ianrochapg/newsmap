@@ -63,8 +63,38 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/brasil',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/brasil.html',
+        templateUrl: 'templates/paises/brasil/brasil.html',
         controller: 'BrasilController'
+      }
+    }
+  })
+
+  .state('app.g1', {
+    url: '/brasil/g1',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/brasil/g1.html',
+        controller: 'G1Controller'
+      }
+    }
+  })
+
+  .state('app.folha', {
+    url: '/brasil/folha',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/brasil/folha.html',
+        controller: 'FolhaController'
+      }
+    }
+  })
+
+  .state('app.estadao', {
+    url: '/brasil/estadao',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/brasil/estadao.html',
+        controller: 'EstadaoController'
       }
     }
   })
@@ -73,7 +103,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/argentina',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/argentina.html',
+        templateUrl: 'templates/paises/argentina/argentina.html',
         controller: 'ArgentinaController'
       }
     }
@@ -83,7 +113,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/canada',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/canada.html',
+        templateUrl: 'templates/paises/canada/canada.html',
         controller: 'CanadaController'
       }
     }
@@ -93,7 +123,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/chile',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/chile.html',
+        templateUrl: 'templates/paises/chile/chile.html',
         controller: 'ChileController'
       }
     }
@@ -103,7 +133,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/chileglobo',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/chileglobo.html',
+        templateUrl: 'templates/paises/chile/chileglobo.html',
         controller: 'ChilegloboController'
       }
     }
@@ -113,7 +143,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/chilefolha',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/chilefolha.html',
+        templateUrl: 'templates/paises/chile/chilefolha.html',
         controller: 'ChilefolhaController'
       }
     }
@@ -123,19 +153,17 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/chileestadao',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/chileestadao.html',
+        templateUrl: 'templates/paises/chile/chileestadao.html',
         controller: 'ChileestadaoController'
       }
     }
   })
 
-
-
   .state('app.china', {
     url: '/china',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/china.html',
+        templateUrl: 'templates/paises/china/china.html',
         controller: 'ChinaController'
       }
     }
@@ -145,18 +173,78 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/espanha',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/espanha.html',
+        templateUrl: 'templates/paises/espanha/espanha.html',
         controller: 'EspanhaController'
       }
     }
   })
 
-  .state('app.estados-unidos', {
-    url: '/estados-unidos',
+  .state('app.elpais', {
+    url: '/espanha/elpais',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/eua.html',
+        templateUrl: 'templates/paises/espanha/elpais.html',
+        controller: 'ElpaisController'
+      }
+    }
+  })
+
+  .state('app.elmundo', {
+    url: '/espanha/elmundo',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/espanha/elmundo.html',
+        controller: 'ElmundoController'
+      }
+    }
+  })
+
+  .state('app.boletin', {
+    url: '/espanha/boletin',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/espanha/boletin.html',
+        controller: 'BoletinController'
+      }
+    }
+  })
+
+  .state('app.eua', {
+    url: '/eua',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/eua/eua.html',
         controller: 'EUAController'
+      }
+    }
+  })
+
+  .state('app.nyt', {
+    url: '/eua/nyt',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/eua/nyt.html',
+        controller: 'NytController'
+      }
+    }
+  })
+
+  .state('app.reuters', {
+    url: '/eua/reuters',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/eua/reuters.html',
+        controller: 'ReutersController'
+      }
+    }
+  })
+
+  .state('app.tribune', {
+    url: '/eua/tribune',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/eua/tribune.html',
+        controller: 'TribuneController'
       }
     }
   })
@@ -165,7 +253,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/franca',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/franca.html',
+        templateUrl: 'templates/paises/franca/franca.html',
         controller: 'FrancaController'
       }
     }
@@ -175,7 +263,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/italia',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/italia.html',
+        templateUrl: 'templates/paises/italia/italia.html',
         controller: 'ItaliaController'
       }
     }
@@ -185,7 +273,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/mexico',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/mexico.html',
+        templateUrl: 'templates/paises/mexico/mexico.html',
         controller: 'MexicoController'
       }
     }
@@ -195,7 +283,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/portugal',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/portugal.html',
+        templateUrl: 'templates/paises/portugal/portugal.html',
         controller: 'PortugalController'
       }
     }
@@ -205,7 +293,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/siria',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/siria.html',
+        templateUrl: 'templates/paises/siria/siria.html',
         controller: 'SiriaController'
       }
     }

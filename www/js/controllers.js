@@ -56,10 +56,39 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('BrasilController', function($scope, $stateParams) {
+.controller('BrasilController', function($scope, $state) {
+  $scope.brasil = [
+    {id: 1, paper: 'Folha', pagina: 'folha', cor: 'royal'},
+    {id: 1, paper: 'Globo', pagina: 'g1', cor: 'energized'},
+    {id: 1, paper: 'Estadão', pagina: 'estadao', cor: 'assertive'},
+  ];
+  $scope.acessar = function(pagina){
+    $state.go('app.'+ pagina);
+  }
 })
 
-.controller('ArgentinaController', function($scope, $stateParams) {
+.controller('G1Controller', function($scope, $http) {
+  $scope.noticias = [];
+  $http.get('http://localhost:3000/brasil/g1').success(function(response){
+    $scope.noticias = response;
+  });
+})
+
+.controller('FolhaController', function($scope, $http) {
+  $scope.noticias = [];
+  $http.get('http://localhost:3000/brasil/folha').success(function(response){
+    $scope.noticias = response;
+  });
+})
+
+.controller('EstadaoController', function($scope, $http) {
+  $scope.noticias = [];
+  $http.get('http://localhost:3000/brasil/estadao').success(function(response){
+    $scope.noticias = response;
+  });
+})
+
+.controller('ArgentinaController', function($scope, $state) {
   $scope.argentina = [
     {id: 1, jornal: 'La Prensa', link:'http://www.folha.uol.com.br/'},
 
@@ -89,35 +118,93 @@ que eu quero que seja repetida dentro do $interval. Exemplo:
   }
 })
 
-.controller('ChilegloboController', function($scope, $stateParams) {
+.controller('ChilegloboController', function($scope, $state) {
 })
 
-.controller('ChilefolhaController', function($scope, $stateParams) {
+.controller('ChilefolhaController', function($scope, $state) {
 })
 
-.controller('ChileestadaoController', function($scope, $stateParams) {
+.controller('ChileestadaoController', function($scope, $state) {
 })
 
-.controller('ChinaController', function($scope, $stateParams) {
+.controller('ChinaController', function($scope, $state) {
 })
 
-.controller('EspanhaController', function($scope, $stateParams) {
+.controller('EspanhaController', function($scope, $state) {
+  $scope.espanha = [
+    {id: 1, paper: 'El País', pagina: 'elpais', cor: 'royal'},
+    {id: 1, paper: 'El Mundo', pagina: 'elmundo', cor: 'energized'},
+    {id: 1, paper: 'Boletín', pagina: 'boletin', cor: 'assertive'},
+  ];
+  $scope.acessar = function(pagina){
+    $state.go('app.'+pagina);
+  }
 })
 
-.controller('EUAController', function($scope, $stateParams) {
+.controller('ElpaisController', function($scope, $http) {
+  $scope.noticias = [];
+  $http.get('http://localhost:3000/espanha/elpais').success(function(response){
+    $scope.noticias = response;
+  });
 })
 
-.controller('FrancaController', function($scope, $stateParams) {
+.controller('ElmundoController', function($scope, $http) {
+  $scope.noticias = [];
+  $http.get('http://localhost:3000/espanha/elmundo').success(function(response){
+    $scope.noticias = response;
+  });
 })
 
-.controller('ItaliaController', function($scope, $stateParams) {
+.controller('BoletinController', function($scope, $http) {
+  $scope.noticias = [];
+  $http.get('http://localhost:3000/espanha/boletin').success(function(response){
+    $scope.noticias = response;
+  });
 })
 
-.controller('MexicoController', function($scope, $stateParams) {
+.controller('EUAController', function($scope, $state) {
+  $scope.eua = [
+    {id: 1, paper: 'NYT', pagina: 'nyt', cor: 'royal'},
+    {id: 1, paper: 'Reuters', pagina: '', cor: 'energized'},
+    {id: 1, paper: 'Estadão', pagina: 'chileestadao', cor: 'assertive'},
+  ];
+  $scope.acessar = function(pagina){
+    $state.go('app.'+pagina);
+  }
 })
 
-.controller('PortugalController', function($scope, $stateParams) {
+.controller('NytController', function($scope, $http) {
+  $scope.noticias = [];
+  $http.get('http://localhost:3000/eua/nyt').success(function(response){
+    $scope.noticias = response;
+  });
 })
 
-.controller('SiriaController', function($scope, $stateParams) {
+.controller('ReutersController', function($scope, $http) {
+  $scope.noticias = [];
+  $http.get('http://localhost:3000/eua/reuters').success(function(response){
+    $scope.noticias = response;
+  });
+})
+
+.controller('TribuneController', function($scope, $http) {
+  $scope.noticias = [];
+  $http.get('http://localhost:3000/eua/tribune').success(function(response){
+    $scope.noticias = response;
+  });
+})
+
+.controller('FrancaController', function($scope, $state) {
+})
+
+.controller('ItaliaController', function($scope, $state) {
+})
+
+.controller('MexicoController', function($scope, $state) {
+})
+
+.controller('PortugalController', function($scope, $state) {
+})
+
+.controller('SiriaController', function($scope, $state) {
 })
