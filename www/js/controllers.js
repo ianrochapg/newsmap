@@ -134,7 +134,7 @@ que eu quero que seja repetida dentro do $interval. Exemplo:
   $scope.espanha = [
     {id: 1, paper: 'El País', pagina: 'elpais', cor: 'royal'},
     {id: 1, paper: 'El Mundo', pagina: 'elmundo', cor: 'energized'},
-    {id: 1, paper: 'Boletín', pagina: 'boletin', cor: 'assertive'},
+    {id: 1, paper: 'La Vanguardia', pagina: 'lavanguardia', cor: 'assertive'},
   ];
   $scope.acessar = function(pagina){
     $state.go('app.'+pagina);
@@ -155,9 +155,9 @@ que eu quero que seja repetida dentro do $interval. Exemplo:
   });
 })
 
-.controller('BoletinController', function($scope, $http) {
+.controller('LavanController', function($scope, $http) {
   $scope.noticias = [];
-  $http.get('http://localhost:3000/espanha/boletin').success(function(response){
+  $http.get('http://localhost:3000/espanha/lavanguardia').success(function(response){
     $scope.noticias = response;
   });
 })

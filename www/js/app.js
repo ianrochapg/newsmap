@@ -199,12 +199,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-  .state('app.boletin', {
-    url: '/espanha/boletin',
+  .state('app.lavanguardia', {
+    url: '/espanha/lavanguardia',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/espanha/boletin.html',
-        controller: 'BoletinController'
+        templateUrl: 'templates/paises/espanha/lavanguardia.html',
+        controller: 'LavanController'
       }
     }
   })
