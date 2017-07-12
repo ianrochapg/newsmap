@@ -43,7 +43,7 @@ angular.module('starter.controllers', [])
     {id: 4, title: 'Chile', pagina:'chile', cor: 'balanced'},
     {id: 5, title: 'China', pagina: 'china', cor: 'calm'},
     {id: 6, title: 'Espanha', pagina: 'espanha', cor: 'positive'},
-    {id: 7, title: 'Estados Unidos', pagina: 'estados-unidos', cor: 'royal'},
+    {id: 7, title: 'Estados Unidos', pagina: 'eua', cor: 'royal'},
     {id: 8, title: 'França', pagina: 'franca', cor: 'assertive'},
     {id: 9, title: 'Itália', pagina: 'italia', cor: 'energized'},
     {id: 10, title: 'México', pagina: 'mexico', cor: 'balanced'},
