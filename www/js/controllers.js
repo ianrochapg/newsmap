@@ -164,9 +164,9 @@ que eu quero que seja repetida dentro do $interval. Exemplo:
 
 .controller('EUAController', function($scope, $state) {
   $scope.eua = [
-    {id: 1, paper: 'The New York times', pagina: 'nyt', cor: 'royal'},
-    {id: 1, paper: 'Reuters', pagina: 'reuters', cor: 'energized'},
-    {id: 1, paper: 'The Chicago Tribune', pagina: 'tribune', cor: 'assertive'},
+    {id: 1, paper: 'The New York Times', pagina: 'nyt', cor: 'royal'},
+    {id: 1, paper: 'Daily News CA', pagina: 'california', cor: 'energized'},
+    {id: 1, paper: 'Washington Post', pagina: 'washpost', cor: 'assertive'},
   ];
   $scope.acessar = function(pagina){
     $state.go('app.'+pagina);
@@ -180,16 +180,16 @@ que eu quero que seja repetida dentro do $interval. Exemplo:
   });
 })
 
-.controller('ReutersController', function($scope, $http) {
+.controller('CaliforniaController', function($scope, $http) {
   $scope.noticias = [];
-  $http.get('http://localhost:3000/eua/reuters').success(function(response){
+  $http.get('http://localhost:3000/eua/california').success(function(response){
     $scope.noticias = response;
   });
 })
 
-.controller('TribuneController', function($scope, $http) {
+.controller('WashController', function($scope, $http) {
   $scope.noticias = [];
-  $http.get('http://localhost:3000/eua/tribune').success(function(response){
+  $http.get('http://localhost:3000/eua/washpost').success(function(response){
     $scope.noticias = response;
   });
 })

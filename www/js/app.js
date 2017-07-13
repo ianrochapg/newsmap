@@ -229,22 +229,22 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-  .state('app.reuters', {
-    url: '/eua/reuters',
+  .state('app.california', {
+    url: '/eua/california',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/eua/reuters.html',
-        controller: 'ReutersController'
+        templateUrl: 'templates/paises/eua/california.html',
+        controller: 'CaliforniaController'
       }
     }
   })
 
-  .state('app.tribune', {
-    url: '/eua/tribune',
+  .state('app.washpost', {
+    url: '/eua/washpost',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/eua/tribune.html',
-        controller: 'TribuneController'
+        templateUrl: 'templates/paises/eua/washpost.html',
+        controller: 'WashController'
       }
     }
   })

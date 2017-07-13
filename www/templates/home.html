@@ -2,7 +2,7 @@
   <ion-content class="pagina.home">
     <button ng-repeat="item in home" class="button button-outline button-block button-{{item.cor}}" ng-click="acessar(item.pagina)">
       {{item.title}}
-      <img src="img/flags/{{item.pagina}}.png" alt="bandeira de {{item.pagina}}">
+      <img ng-src="img/flags/{{item.pagina}}.png" alt="bandeira de {{item.pagina}}">
     </button>
   </ion-content>
 </ion-view>
