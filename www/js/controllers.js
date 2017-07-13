@@ -64,12 +64,12 @@ angular.module('starter.controllers', [])
   ];
   $scope.acessar = function(pagina){
     $state.go('app.'+ pagina);
-  }
+  };
 })
 
 .controller('G1Controller', function($scope, $http) {
   $scope.noticias = [];
-  $http.get('http://172.16.16.78:3000/brasil/g1').success(function(response){
+  $http.get('http://172.16.16.216:3000/brasil/g1').success(function(response){
     $scope.noticias = response;
   });
   // função para abrir link no app
@@ -80,16 +80,22 @@ angular.module('starter.controllers', [])
 
 .controller('FolhaController', function($scope, $http) {
   $scope.noticias = [];
-  $http.get('http://localhost:3000/brasil/folha').success(function(response){
+  $http.get('http://172.16.16.216:3000/brasil/folha').success(function(response){
     $scope.noticias = response;
   });
+  $scope.abrirApp = function (url) {
+    cordova.InAppBrowser.open(url)
+  }
 })
 
 .controller('EstadaoController', function($scope, $http) {
   $scope.noticias = [];
-  $http.get('http://localhost:3000/brasil/estadao').success(function(response){
+  $http.get('http://172.16.16.216:3000/brasil/estadao').success(function(response){
     $scope.noticias = response;
   });
+  $scope.abrirApp = function (url) {
+    cordova.InAppBrowser.open(url)
+  }
 })
 
 .controller('ArgentinaController', function($scope, $state) {
@@ -101,7 +107,7 @@ angular.module('starter.controllers', [])
 
 .controller('CanadaController', function($scope, $http) {
   $scope.noticias = [];
-  $http.get('http://localhost:3000/canada').success(function(response){
+  $http.get('http://172.16.16.216:3000/canada').success(function(response){
     $scope.noticias = response;
   });
 })
@@ -147,23 +153,32 @@ que eu quero que seja repetida dentro do $interval. Exemplo:
 
 .controller('ElpaisController', function($scope, $http) {
   $scope.noticias = [];
-  $http.get('http://localhost:3000/espanha/elpais').success(function(response){
+  $http.get('http://172.16.16.216:3000/espanha/elpais').success(function(response){
     $scope.noticias = response;
   });
+  $scope.abrirApp = function (url) {
+    cordova.InAppBrowser.open(url)
+  }
 })
 
 .controller('ElmundoController', function($scope, $http) {
   $scope.noticias = [];
-  $http.get('http://localhost:3000/espanha/elmundo').success(function(response){
+  $http.get('http://172.16.16.216:3000/espanha/elmundo').success(function(response){
     $scope.noticias = response;
   });
+  $scope.abrirApp = function (url) {
+    cordova.InAppBrowser.open(url)
+  }
 })
 
 .controller('LavanController', function($scope, $http) {
   $scope.noticias = [];
-  $http.get('http://localhost:3000/espanha/lavanguardia').success(function(response){
+  $http.get('http://172.16.16.216:3000/espanha/lavanguardia').success(function(response){
     $scope.noticias = response;
   });
+  $scope.abrirApp = function (url) {
+    cordova.InAppBrowser.open(url)
+  }
 })
 
 .controller('EUAController', function($scope, $state) {
@@ -179,23 +194,32 @@ que eu quero que seja repetida dentro do $interval. Exemplo:
 
 .controller('NytController', function($scope, $http) {
   $scope.noticias = [];
-  $http.get('http://localhost:3000/eua/nyt').success(function(response){
+  $http.get('http://172.16.16.216:3000/eua/nyt').success(function(response){
     $scope.noticias = response;
   });
+  $scope.abrirApp = function (url) {
+    cordova.InAppBrowser.open(url)
+  }
 })
 
 .controller('CaliforniaController', function($scope, $http) {
   $scope.noticias = [];
-  $http.get('http://localhost:3000/eua/california').success(function(response){
+  $http.get('http://172.16.16.216:3000/eua/california').success(function(response){
     $scope.noticias = response;
   });
+  $scope.abrirApp = function (url) {
+    cordova.InAppBrowser.open(url)
+  }
 })
 
 .controller('WashController', function($scope, $http) {
   $scope.noticias = [];
-  $http.get('http://localhost:3000/eua/washpost').success(function(response){
+  $http.get('http://172.16.16.216:3000/eua/washpost').success(function(response){
     $scope.noticias = response;
   });
+  $scope.abrirApp = function (url) {
+    cordova.InAppBrowser.open(url)
+  }
 })
 
 .controller('FrancaController', function($scope, $state) {
