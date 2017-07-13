@@ -69,9 +69,13 @@ angular.module('starter.controllers', [])
 
 .controller('G1Controller', function($scope, $http) {
   $scope.noticias = [];
-  $http.get('http://localhost:3000/brasil/g1').success(function(response){
+  $http.get('http://172.16.16.78:3000/brasil/g1').success(function(response){
     $scope.noticias = response;
   });
+  // função para abrir link no app
+  $scope.abrirApp = function (url) {
+    cordova.InAppBrowser.open(url)
+  }
 })
 
 .controller('FolhaController', function($scope, $http) {
