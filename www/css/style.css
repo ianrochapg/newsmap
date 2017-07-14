@@ -1,3 +1,7 @@
+body{
+  font-family: 'Merriweather', serif;
+}
+
 ion-content{
   background-color: #273347;
 }
@@ -9,7 +13,8 @@ ion-content{
 
 .button.button-outline.button-block {
   text-align: left;
-  font-size: 20px;
+  font-size: 16px;
+  font-family: 'Merriweather', serif;
   color: white;
 
 }
@@ -26,7 +31,7 @@ ion-content{
 
 .button.button-outline.button-block img{
   margin-top: 10px;
-  margin-bottom: -13px;
+  margin-bottom: -10px;
   width: 40px;
   height: 30px;
 }
@@ -46,9 +51,11 @@ h2.noticia-title{
 
 h3.selecionar{
   text-align: center;
-  color: white;
+  color: #9799a0;
   margin-top: 15px;
   margin-bottom: 10px;
+  font-family: 'Merriweather', serif;
+
 }
 
 .jornal img{
