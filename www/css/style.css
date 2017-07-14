@@ -47,4 +47,20 @@ h2.noticia-title{
 h3.selecionar{
   text-align: center;
   color: white;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.jornal img{
+  height: 35px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+.jornal.button.button-block.button-g1{
+  background-color: #a3101a;
+}
+
+.jornal.button.button-block.button-lavanguardia{
+  background-color: #1b2f6d;
 }

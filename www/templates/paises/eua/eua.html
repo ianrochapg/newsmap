@@ -1,7 +1,8 @@
 <ion-view view-title="Estados Unidos">
   <ion-content class="pagina-pais">
-    <button ng-repeat="item in eua" class="button button-outline button-block button-{{item.cor}}" ng-click="acessar(item.pagina)">
-      {{item.paper}}
+    <h3 class="selecionar">Selecione um jornal</h3>
+    <button ng-repeat="item in eua" class="jornal button button-block button-{{item.pagina}}" ng-click="acessar(item.pagina)">
+      <img ng-src="img/icons/{{item.pagina}}.png" alt="{{item.paper}}">
     </button>
   </ion-content>
 </ion-view>
