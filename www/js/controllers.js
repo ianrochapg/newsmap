@@ -37,17 +37,17 @@ angular.module('starter.controllers', [])
 
 .controller('HomeController', function($scope, $state) {
   $scope.home = [
-    {id: 1, title: 'Brasil', pagina: 'brasil', cor: 'royal'},
-    {id: 2, title: 'Argentina', pagina: 'argentina', cor: 'assertive'},
-    {id: 3, title: 'Canadá', pagina: 'canada', cor: 'energized'},
-    {id: 4, title: 'Chile', pagina:'chile', cor: 'balanced'},
-    {id: 5, title: 'China', pagina: 'china', cor: 'calm'},
-    {id: 6, title: 'Espanha', pagina: 'espanha', cor: 'positive'},
-    {id: 7, title: 'Estados Unidos', pagina: 'eua', cor: 'royal'},
-    {id: 8, title: 'França', pagina: 'franca', cor: 'assertive'},
-    {id: 9, title: 'Itália', pagina: 'italia', cor: 'energized'},
-    {id: 10, title: 'México', pagina: 'mexico', cor: 'balanced'},
-    {id: 11, title: 'Portugal', pagina: 'portugal', cor: 'calm'},
+    {id: 1, title: 'Brasil', pagina: 'brasil', cor: 'light'},
+    {id: 2, title: 'Argentina', pagina: 'argentina', cor: ''},
+    {id: 3, title: 'Canadá', pagina: 'canada', cor: ''},
+    {id: 4, title: 'Chile', pagina:'chile', cor: ''},
+    {id: 5, title: 'China', pagina: 'china', cor: ''},
+    {id: 6, title: 'Espanha', pagina: 'espanha', cor: ''},
+    {id: 7, title: 'Estados Unidos', pagina: 'eua', cor: ''},
+    {id: 8, title: 'França', pagina: 'franca', cor: ''},
+    {id: 9, title: 'Itália', pagina: 'italia', cor: ''},
+    {id: 10, title: 'México', pagina: 'mexico', cor: ''},
+    {id: 11, title: 'Portugal', pagina: 'portugal', cor: ''},
     // {id: 12, title: 'Síria', pagina: 'siria', cor: 'positive'}
   ];
 

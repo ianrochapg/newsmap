@@ -7,8 +7,28 @@ ion-content{
   text-align: center;
 }
 
+.button.button-outline.button-block {
+  text-align: left;
+  font-size: 20px;
+  color: white;
+
+}
+
+.pagina-home button.button{
+  /*border-color: white;*/
+  border-top: 2px solid #aaabaf;
+}
+
+.pagina-home span{
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .button.button-outline.button-block img{
-  padding-left: 15px;
+  margin-top: 10px;
+  margin-bottom: -13px;
+  width: 40px;
+  height: 30px;
 }
 
 iframe{
@@ -22,4 +42,9 @@ iframe{
 h2.noticia-title{
   white-space: normal;
   height: 3.6em;
+}
+
+h3.selecionar{
+  text-align: center;
+  color: white;
 }

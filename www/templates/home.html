@@ -1,8 +1,9 @@
-<ion-view view-title="Home">
-  <ion-content class="pagina.home">
-    <button ng-repeat="item in home" class="button button-outline button-block button-{{item.cor}}" ng-click="acessar(item.pagina)">
-      {{item.title}}
+<ion-view view-title="NewsMap">
+  <ion-content class="pagina-home">
+    <h3 class="selecionar">Selecione um país</h3>
+    <button ng-repeat="item in home" class="button button-outline button-block" ng-click="acessar(item.pagina)">
       <img ng-src="img/flags/{{item.pagina}}.png" alt="bandeira de {{item.pagina}}">
+      <span>{{item.title}}</span>
     </button>
 
     <div class="class"="list">
