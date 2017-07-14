@@ -18,3 +18,8 @@ iframe{
 .title.title-center.header-item{
   font-size: 25px;
 }
+
+h2.noticia-title{
+  white-space: normal;
+  height: 3.6em;
+}
