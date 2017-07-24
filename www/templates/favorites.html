@@ -1,0 +1,10 @@
+<ion-view view-title="Favorites">
+  <ion-content class="pagina-favorites">
+    <h3 class="selecionar">Selecione um país</h3>
+    <img ng-src="img/brasil-icon.png" ng-click='acessar(brasil)'>
+    <button ng-repeat="item in favorites" class="button button-outline button-block" ng-click="acessar(item.pagina)">
+      <img ng-src="img/flags/{{item.pagina}}.png" alt="bandeira de {{item.pagina}}">
+      <span>{{item.title}}</span>
+    </button>
+  </ion-content>
+</ion-view>

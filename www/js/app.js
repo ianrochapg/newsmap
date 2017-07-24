@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -41,14 +41,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-  .state('app.browse', {
-    url: '/browse',
+  .state('app.favorites', {
+    url: '/favorites',
     views: {
       'menuContent': {
-        templateUrl: 'templates/browse.html'
+        templateUrl: 'templates/favorites.html',
+        controller: 'FavoritesController'
       }
     }
   })
+
   .state('app.home', {
     url: '/home',
     views: {
@@ -109,62 +111,22 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.australia', {
+    url: '/australia',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/australia/australia.html',
+        controller: 'AustraliaController'
+      }
+    }
+  })
+
   .state('app.canada', {
     url: '/canada',
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/canada/canada.html',
         controller: 'CanadaController'
-      }
-    }
-  })
-
-  .state('app.chile', {
-    url: '/chile',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/paises/chile/chile.html',
-        controller: 'ChileController'
-      }
-    }
-  })
-
-  .state('app.chileglobo', {
-    url: '/chileglobo',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/paises/chile/chileglobo.html',
-        controller: 'ChilegloboController'
-      }
-    }
-  })
-
-  .state('app.chilefolha', {
-    url: '/chilefolha',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/paises/chile/chilefolha.html',
-        controller: 'ChilefolhaController'
-      }
-    }
-  })
-
-  .state('app.chileestadao', {
-    url: '/chileestadao',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/paises/chile/chileestadao.html',
-        controller: 'ChileestadaoController'
-      }
-    }
-  })
-
-  .state('app.china', {
-    url: '/china',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/paises/china/china.html',
-        controller: 'ChinaController'
       }
     }
   })
@@ -269,6 +231,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.japao', {
+    url: '/japao',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/japao/japao.html',
+        controller: 'JapaoController'
+      }
+    }
+  })
+
   .state('app.mexico', {
     url: '/mexico',
     views: {
@@ -279,22 +251,22 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-  .state('app.portugal', {
-    url: '/portugal',
+  .state('app.reinounido', {
+    url: '/reinounido',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/portugal/portugal.html',
-        controller: 'PortugalController'
+        templateUrl: 'templates/paises/reinounido/reinounido.html',
+        controller: 'ReinoUnidoController'
       }
     }
   })
 
-  .state('app.siria', {
-    url: '/siria',
+  .state('app.venezuela', {
+    url: '/venezuela',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/siria/siria.html',
-        controller: 'SiriaController'
+        templateUrl: 'templates/paises/venezuela/venezuela.html',
+        controller: 'VenezuelaController'
       }
     }
   });

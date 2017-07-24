@@ -1,14 +1,8 @@
 <ion-view view-title="Canadá">
   <ion-content class="pagina-pais">
-    <h1>Canadá</h1>
-    <div class="list">
-      <a class="item" ng-repeat="noticia in noticias" href="{{noticia.link}}" target="_blank">
-        <h2 class="noticia-title">{{noticia.titulo}}</h2>
-        <p>{{noticia.desc}}</p>
-        <p>Fonte: G1 - g1.globo.com</p>
-        <!-- <img ng-src="{{noticia.thumbnail}}" ng-if="noticia.thumbnail.startsWith('http')"> -->
-         <!-- item-thumbnail-left -->
-      </a>
-    </div>
+    <h3 class="selecionar">Selecione um jornal</h3>
+    <button ng-repeat="item in canada" class="jornal button button-block button-{{item.pagina}}" ng-click="acessar(item.pagina)">
+      <img ng-src="img/icons/{{item.pagina}}.png" alt="{{item.paper}}">
+    </button>
   </ion-content>
 </ion-view>

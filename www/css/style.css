@@ -19,7 +19,25 @@ ion-content{
 
 }
 
+.pagina-home img{
+  width: 33%;
+  margin: 20px auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.pagina-home{
+  width: 100%;
+  background-image: url('../img/op1.png');
+  background-size: cover;
+}
+
 .pagina-home button.button{
+  /*border-color: white;*/
+  border-top: 2px solid #aaabaf;
+}
+
+.pagina-favorites button.button{
   /*border-color: white;*/
   border-top: 2px solid #aaabaf;
 }
@@ -29,9 +47,14 @@ ion-content{
   vertical-align: middle;
 }
 
+.pagina-favorites span{
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .button.button-outline.button-block img{
   margin-top: 10px;
-  margin-bottom: -10px;
+  margin-bottom: 10px;
   width: 40px;
   height: 30px;
 }
@@ -59,9 +82,9 @@ h3.selecionar{
 }
 
 .jornal img{
-  height: 35px;
+  height: 50px;
   padding-top: 10px;
-  padding-bottom: 0px;
+  padding-bottom: 10px;
 }
 
 .jornal.button.button-block.button-g1{
@@ -70,4 +93,28 @@ h3.selecionar{
 
 .jornal.button.button-block.button-lavanguardia{
   background-color: #1b2f6d;
+}
+
+.jornal.button.button-block.button-otempo{
+  background-color: #1b4623;
+}
+
+.jornal.button.button-block.button-oglobo{
+  background-color: #05509a;
+}
+
+.jornal.button.button-block.button-lavoz{
+  background-color: #05509a;
+}
+
+.jornal.button.button-block.button-nationalpost{
+  background-color: #fed458;
+}
+
+.jornal.button.button-block.button-metronews{
+  background-color: #04803f;
+}
+
+.jornal.button.button-block.button-torontostar{
+  background-color: #236eb5;
 }

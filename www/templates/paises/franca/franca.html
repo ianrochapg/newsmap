@@ -1,5 +1,8 @@
 <ion-view view-title="França">
   <ion-content class="pagina-pais">
-    <h1>França</h1>
+    <h3 class="selecionar">Selecione um jornal</h3>
+    <button ng-repeat="item in franca" class="jornal button button-block button-{{item.pagina}}" ng-click="acessar(item.pagina)">
+      <img ng-src="img/icons/{{item.pagina}}.png" alt="{{item.paper}}">
+    </button>
   </ion-content>
 </ion-view>

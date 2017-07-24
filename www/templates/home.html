@@ -1,9 +1,10 @@
 <ion-view view-title="NewsMap">
   <ion-content class="pagina-home">
     <h3 class="selecionar">Selecione um país</h3>
-    <button ng-repeat="item in home" class="button button-outline button-block" ng-click="acessar(item.pagina)">
+    <!-- <button ng-repeat="item in home" class="button button-outline button-block" ng-click="acessar(item.pagina)">
       <img ng-src="img/flags/{{item.pagina}}.png" alt="bandeira de {{item.pagina}}">
       <span>{{item.title}}</span>
-    </button>
+    </button> -->
+    <img ng-repeat="item in home" ng-src="img/{{item.pagina}}-icon.png" alt="{{item.title}}" ng-click='acessar(item.pagina)'>
   </ion-content>
 </ion-view>
