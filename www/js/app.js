@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
+angular.module('starter', ['ionic', 'starter.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -66,7 +66,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/brasil/brasil.html',
-        controller: 'BrasilController'
+        controller: 'PaisController'
       }
     }
   })
@@ -76,7 +76,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/brasil/g1.html',
-        controller: 'G1Controller'
+        controller: 'JornalController'
       }
     }
   })
@@ -86,7 +86,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/brasil/folha.html',
-        controller: 'FolhaController'
+        controller: 'JornalController'
       }
     }
   })
@@ -96,7 +96,28 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/brasil/estadao.html',
-        controller: 'EstadaoController'
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.oglobo', {
+    url: '/brasil/oglobo',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/brasil/oglobo.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+
+  .state('app.otempo', {
+    url: '/brasil/otempo',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/brasil/otempo.html',
+        controller: 'JornalController'
       }
     }
   })
@@ -106,7 +127,47 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/argentina/argentina.html',
-        controller: 'ArgentinaController'
+        controller: 'PaisController'
+      }
+    }
+  })
+
+  .state('app.clarin', {
+    url: '/argentina/clarin',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/argentina/clarin.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.lanacion', {
+    url: '/argentina/lanacion',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/argentina/lanacion.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.losandes', {
+    url: '/argentina/losandes',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/argentina/losandes.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.lavoz', {
+    url: '/argentina/lavoz',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/argentina/lavoz.html',
+        controller: 'JornalController'
       }
     }
   })
@@ -116,7 +177,57 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/australia/australia.html',
-        controller: 'AustraliaController'
+        controller: 'PaisController'
+      }
+    }
+  })
+
+  .state('app.theage', {
+    url: '/australia/theage',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/australia/theage.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.telegraph', {
+    url: '/australia/telegraph',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/australia/telegraph.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.couriermail', {
+    url: '/australia/couriermail',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/australia/couriermail.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.sydneyherald', {
+    url: '/australia/sydneyherald',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/australia/sydneyherald.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.heraldsun', {
+    url: '/australia/heraldsun',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/australia/heraldsun.html',
+        controller: 'JornalController'
       }
     }
   })
@@ -126,7 +237,57 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/canada/canada.html',
-        controller: 'CanadaController'
+        controller: 'PaisController'
+      }
+    }
+  })
+
+  .state('app.torontostar', {
+    url: '/canada/torontostar',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/canada/torontostar.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.vancouversun', {
+    url: '/canada/vancouversun',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/canada/vancouversun.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.metronews', {
+    url: '/canada/metronews',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/canada/metronews.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.nationalpost', {
+    url: '/canada/nationalpost',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/canada/nationalpost.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.ottawacitizen', {
+    url: '/canada/ottawacitizen',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/canada/ottawacitizen.html',
+        controller: 'JornalController'
       }
     }
   })
@@ -136,7 +297,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/espanha/espanha.html',
-        controller: 'EspanhaController'
+        controller: 'PaisController'
       }
     }
   })
@@ -146,7 +307,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/espanha/elpais.html',
-        controller: 'ElpaisController'
+        controller: 'JornalController'
       }
     }
   })
@@ -156,7 +317,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/espanha/elmundo.html',
-        controller: 'ElmundoController'
+        controller: 'JornalController'
       }
     }
   })
@@ -166,7 +327,27 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/espanha/lavanguardia.html',
-        controller: 'LavanController'
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.abcespana', {
+    url: '/espanha/abcespana',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/espanha/abcespana.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.elcorreo', {
+    url: '/espanha/elcorreo',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/espanha/elcorreo.html',
+        controller: 'JornalController'
       }
     }
   })
@@ -176,7 +357,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/eua/eua.html',
-        controller: 'EUAController'
+        controller: 'PaisController'
       }
     }
   })
@@ -186,17 +367,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/eua/nyt.html',
-        controller: 'NytController'
+        controller: 'JornalController'
       }
     }
   })
 
-  .state('app.california', {
-    url: '/eua/california',
+  .state('app.nydailynews', {
+    url: '/eua/nydailynews',
     views: {
       'menuContent': {
-        templateUrl: 'templates/paises/eua/california.html',
-        controller: 'CaliforniaController'
+        templateUrl: 'templates/paises/eua/nydailynews.html',
+        controller: 'JornalController'
       }
     }
   })
@@ -206,7 +387,27 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/eua/washpost.html',
-        controller: 'WashController'
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.usatoday', {
+    url: '/eua/usatoday',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/eua/usatoday.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.twsj', {
+    url: '/eua/twsj',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/eua/twsj.html',
+        controller: 'JornalController'
       }
     }
   })
@@ -216,7 +417,57 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/franca/franca.html',
-        controller: 'FrancaController'
+        controller: 'PaisController'
+      }
+    }
+  })
+
+  .state('app.lemonde', {
+    url: '/franca/lemonde',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/franca/lemonde.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.lefigaro', {
+    url: '/franca/lefigaro',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/franca/lefigaro.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.leparisien', {
+    url: '/franca/leparisien',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/franca/leparisien.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.lexpressfr', {
+    url: '/franca/lexpressfr',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/franca/lexpressfr.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.ouestfrance', {
+    url: '/franca/ouestfrance',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/franca/ouestfrance.html',
+        controller: 'JornalController'
       }
     }
   })
@@ -226,7 +477,57 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/italia/italia.html',
-        controller: 'ItaliaController'
+        controller: 'PaisController'
+      }
+    }
+  })
+
+  .state('app.lastampa', {
+    url: '/italia/lastampa',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/italia/lastampa.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.larepubblica', {
+    url: '/italia/larepubblica',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/italia/larepubblica.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.cds', {
+    url: '/italia/cds',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/italia/cds.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.ilsole', {
+    url: '/italia/ilsole',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/italia/ilsole.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.ilmessaggero', {
+    url: '/italia/ilmessaggero',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/italia/ilmessaggero.html',
+        controller: 'JornalController'
       }
     }
   })
@@ -236,7 +537,57 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/japao/japao.html',
-        controller: 'JapaoController'
+        controller: 'PaisController'
+      }
+    }
+  })
+
+  .state('app.nhkonline', {
+    url: '/japao/nhkonline',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/japao/nhkonline.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.thejapantimes', {
+    url: '/japao/thejapantimes',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/japao/thejapantimes.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.asianikkei', {
+    url: '/japao/asianikkei',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/japao/asianikkei.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.japantoday', {
+    url: '/japao/japantoday',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/japao/japantoday.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.asahishimbun', {
+    url: '/japao/asahishimbun',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/japao/asahishimbun.html',
+        controller: 'JornalController'
       }
     }
   })
@@ -246,7 +597,37 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/mexico/mexico.html',
-        controller: 'MexicoController'
+        controller: 'PaisController'
+      }
+    }
+  })
+
+  .state('app.lajornada', {
+    url: '/mexico/lajornada',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/mexico/lajornada.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.reforma', {
+    url: '/mexico/reforma',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/mexico/reforma.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.eluniversalmx', {
+    url: '/mexico/eluniversalmx',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/mexico/eluniversalmx.html',
+        controller: 'JornalController'
       }
     }
   })
@@ -256,7 +637,57 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/reinounido/reinounido.html',
-        controller: 'ReinoUnidoController'
+        controller: 'PaisController'
+      }
+    }
+  })
+
+  .state('app.tdmuk', {
+    url: '/reinounido/tdmuk',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/reinounido/tdmuk.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.metrouk', {
+    url: '/reinounido/metrouk',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/reinounido/metrouk.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.bbc', {
+    url: '/reinounido/bbc',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/reinounido/bbc.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.theguardian', {
+    url: '/reinounido/theguardian',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/reinounido/theguardian.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.theindependent', {
+    url: '/reinounido/theindependent',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/reinounido/theindependent.html',
+        controller: 'JornalController'
       }
     }
   })
@@ -266,7 +697,27 @@ angular.module('starter', ['ionic', 'starter.controllers', 'leaflet-directive'])
     views: {
       'menuContent': {
         templateUrl: 'templates/paises/venezuela/venezuela.html',
-        controller: 'VenezuelaController'
+        controller: 'PaisController'
+      }
+    }
+  })
+
+  .state('app.lapatilla', {
+    url: '/venezuela/lapatilla',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/venezuela/lapatilla.html',
+        controller: 'JornalController'
+      }
+    }
+  })
+
+  .state('app.eluniversal', {
+    url: '/venezuela/eluniversal',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paises/venezuela/eluniversal.html',
+        controller: 'JornalController'
       }
     }
   });
