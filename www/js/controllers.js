@@ -35,7 +35,7 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('HomeController', function($scope, $state) {
+.controller('HomeController', function($scope, $state, $location) {
   $scope.home = [
     {id: 1, title: 'Brasil', pagina: 'brasil'},
     {id: 2, title: 'Argentina', pagina: 'argentina'},
@@ -52,128 +52,159 @@ angular.module('starter.controllers', [])
   ];
 
   $scope.acessar = function(pagina){
-    $state.go('app.'+pagina);
+    $location.path('/app/paises/'+pagina);
   }
 })
 
 .controller('FavoritesController', function($scope, $state) {
-  $scope.favorites = [
-    {id: 1, title: 'Brasil', pagina: 'brasil'},
-    {id: 2, title: 'Argentina', pagina: 'argentina'},
-    {id: 3, title: 'Austrália', pagina: 'australia'},
-    {id: 4, title: 'Canadá', pagina: 'canada'},
-    {id: 5, title: 'Espanha', pagina: 'espanha'},
-    {id: 6, title: 'Estados Unidos', pagina: 'eua'},
-    {id: 7, title: 'França', pagina: 'franca'},
-    {id: 8, title: 'Itália', pagina: 'italia'},
-    {id: 9, title: 'Japão', pagina: 'japao'},
-    {id: 10, title: 'México', pagina: 'mexico'},
-    {id: 11, title: 'Reino Unido', pagina: 'reinounido'},
-    {id: 12, title: 'Venezuela', pagina: 'venezuela'}
-  ];
-
-  $scope.acessar = function(pagina){
-    $state.go('app.'+pagina);
-  }
+  // $scope.favorites = [
+  //   {id: 1, title: 'Brasil', pagina: 'brasil'},
+  //   {id: 2, title: 'Argentina', pagina: 'argentina'},
+  //   {id: 3, title: 'Austrália', pagina: 'australia'},
+  //   {id: 4, title: 'Canadá', pagina: 'canada'},
+  //   {id: 5, title: 'Espanha', pagina: 'espanha'},
+  //   {id: 6, title: 'Estados Unidos', pagina: 'eua'},
+  //   {id: 7, title: 'França', pagina: 'franca'},
+  //   {id: 8, title: 'Itália', pagina: 'italia'},
+  //   {id: 9, title: 'Japão', pagina: 'japao'},
+  //   {id: 10, title: 'México', pagina: 'mexico'},
+  //   {id: 11, title: 'Reino Unido', pagina: 'reinounido'},
+  //   {id: 12, title: 'Venezuela', pagina: 'venezuela'}
+  // ];
+  //
+  // $scope.acessar = function(pagina){
+  //   $state.go('app.pais');
+  // }
 })
 
-.controller('PaisController', function($scope, $state) {
-  $scope.brasil = [
+.controller('PaisController', function($scope, $state, $stateParams, $location) {
+  var listaPaises = [{ nome : 'brasil', conteudo : [
     {id: 1, paper: 'Folha', pagina: 'folha'},
     {id: 1, paper: 'Globo', pagina: 'g1'},
     {id: 1, paper: 'Estadão', pagina: 'estadao'},
     {id: 1, paper: 'O Tempo', pagina: 'otempo'},
-    {id: 1, paper: 'O Globo', pagina: 'oglobo'},
-  ];
+    {id: 1, paper: 'O Globo', pagina: 'oglobo'}
+  ]},
 
-  $scope.argentina = [
+  { nome : 'argentina',
+    conteudo : [
     {id: 1, paper: 'Clarín', pagina: 'clarin'},
     {id: 1, paper: 'La Nación', pagina: 'lanacion'},
     {id: 1, paper: 'Los Andes', pagina: 'losandes'},
     {id: 1, paper: 'La Voz', pagina: 'lavoz'},
-  ];
+  ]
+},
 
-  $scope.australia = [
-    {id: 1, paper: 'The Age', pagina: 'theage'},
-    {id: 1, paper: 'Daily Telegraph', pagina: 'telegraph'},
-    {id: 1, paper: 'Courier Mail', pagina: 'couriermail'},
-    {id: 1, paper: 'The Sydney Morning Herald', pagina: 'sydneyherald'},
-    {id: 1, paper: 'Herald Sun', pagina: 'heraldsun'},
-  ];
+  { nome : 'australia',
+    conteudo : [
+      {id: 1, paper: 'The Age', pagina: 'theage'},
+      {id: 1, paper: 'Daily Telegraph', pagina: 'telegraph'},
+      {id: 1, paper: 'Courier Mail', pagina: 'couriermail'},
+      {id: 1, paper: 'The Sydney Morning Herald', pagina: 'sydneyherald'},
+      {id: 1, paper: 'Herald Sun', pagina: 'heraldsun'},
+    ]
+  },
 
-  $scope.canada = [
-    {id: 1, paper: 'Toronto Star', pagina: 'torontostar'},
-    {id: 1, paper: 'Vancouver Sun', pagina: 'vancouversun'},
-    {id: 1, paper: 'Metro News Canada', pagina: 'metronews'},
-    {id: 1, paper: 'National Post', pagina: 'nationalpost'},
-    {id: 1, paper: 'Ottawa Citizen', pagina: 'ottawacitizen'},
-  ];
+  { nome : 'canada',
+    conteudo : [
+      {id: 1, paper: 'Toronto Star', pagina: 'torontostar'},
+      {id: 1, paper: 'Vancouver Sun', pagina: 'vancouversun'},
+      {id: 1, paper: 'Metro News Canada', pagina: 'metronews'},
+      {id: 1, paper: 'National Post', pagina: 'nationalpost'},
+      {id: 1, paper: 'Ottawa Citizen', pagina: 'ottawacitizen'},
+    ]
+  },
 
-  $scope.espanha = [
-    {id: 1, paper: 'El País', pagina: 'elpais'},
-    {id: 1, paper: 'El Mundo', pagina: 'elmundo'},
-    {id: 1, paper: 'La Vanguardia', pagina: 'lavanguardia'},
-    {id: 1, paper: 'ABC España', pagina: 'abcespana'},
-    {id: 1, paper: 'El Correo', pagina: 'elcorreo'},
-  ];
+  { nome : 'espanha',
+    conteudo : [
+      {id: 1, paper: 'El País', pagina: 'elpais'},
+      {id: 1, paper: 'El Mundo', pagina: 'elmundo'},
+      {id: 1, paper: 'La Vanguardia', pagina: 'lavanguardia'},
+      {id: 1, paper: 'ABC España', pagina: 'abcespana'},
+      {id: 1, paper: 'El Correo', pagina: 'elcorreo'},
+    ]
+  },
 
-  $scope.eua = [
-    {id: 1, paper: 'The New York Times', pagina: 'nyt'},
-    {id: 1, paper: 'USA Today', pagina: 'usatoday'},
-    {id: 1, paper: 'Washington Post', pagina: 'washpost'},
-    {id: 1, paper: 'New York Daily News', pagina: 'nydailynews'},
-    {id: 1, paper: 'The Wall Street Journal', pagina: 'twsj'},
-  ];
+  { nome : 'eua',
+    conteudo : [
+      {id: 1, paper: 'The New York Times', pagina: 'nyt'},
+      {id: 1, paper: 'USA Today', pagina: 'usatoday'},
+      {id: 1, paper: 'Washington Post', pagina: 'washpost'},
+      {id: 1, paper: 'New York Daily News', pagina: 'nydailynews'},
+      {id: 1, paper: 'The Wall Street Journal', pagina: 'twsj'},
+    ]
+  },
 
-  $scope.franca = [
-    {id: 1, paper: 'Le Monde', pagina: 'lemonde'},
-    {id: 1, paper: 'Le Figaro', pagina: 'lefigaro'},
-    {id: 1, paper: 'Le Parisien', pagina: 'leparisien'},
-    {id: 1, paper: 'Ouest France', pagina: 'ouestfrance'},
-    {id: 1, paper: "L'Express FR", pagina: 'lexpressfr'},
-  ];
+  { nome : 'franca',
+    conteudo : [
+      {id: 1, paper: 'Le Monde', pagina: 'lemonde'},
+      {id: 1, paper: 'Le Figaro', pagina: 'lefigaro'},
+      {id: 1, paper: 'Le Parisien', pagina: 'leparisien'},
+      {id: 1, paper: 'Ouest France', pagina: 'ouestfrance'},
+      {id: 1, paper: "L'Express FR", pagina: 'lexpressfr'},
+    ]
+  },
 
-  $scope.italia = [
-    {id: 1, paper: 'La Stampa', pagina: 'lastampa'},
-    {id: 1, paper: 'La Repubblica', pagina: 'larepubblica'},
-    {id: 1, paper: 'Corriere Della Sera', pagina: 'cds'},
-    {id: 1, paper: 'Il Sole 24 Ore', pagina: 'ilsole'},
-    {id: 1, paper: 'Il Messaggero', pagina: 'ilmessaggero'},
-  ];
+  { nome : 'italia',
+    conteudo : [
+      {id: 1, paper: 'La Stampa', pagina: 'lastampa'},
+      {id: 1, paper: 'La Repubblica', pagina: 'larepubblica'},
+      {id: 1, paper: 'Corriere Della Sera', pagina: 'cds'},
+      {id: 1, paper: 'Il Sole 24 Ore', pagina: 'ilsole'},
+      {id: 1, paper: 'Il Messaggero', pagina: 'ilmessaggero'},
+    ]
+  },
 
-  $scope.japao = [
-    {id: 1, paper: 'NHK Online', pagina: 'nhkonline'},
-    {id: 1, paper: 'The Japan Times', pagina: 'thejapantimes'},
-    {id: 1, paper: 'Asia Nikkei', pagina: 'asianikkei'},
-    {id: 1, paper: 'Japan Today', pagina: 'japantoday'},
-    {id: 1, paper: 'Asahi Shimbun', pagina: 'asahishimbun'},
-  ];
+  { nome : 'japao',
+    conteudo : [
+      {id: 1, paper: 'NHK Online', pagina: 'nhkonline'},
+      {id: 1, paper: 'The Japan Times', pagina: 'thejapantimes'},
+      {id: 1, paper: 'Asia Nikkei', pagina: 'asianikkei'},
+      {id: 1, paper: 'Japan Today', pagina: 'japantoday'},
+      {id: 1, paper: 'Asahi Shimbun', pagina: 'asahishimbun'},
+    ]
+  },
 
-  $scope.mexico = [
-    {id: 1, paper: 'La Jornada', pagina: 'lajornada'},
-    {id: 1, paper: 'Reforma', pagina: 'reforma'},
-    {id: 1, paper: 'El Universal', pagina: 'eluniversalmx'},
-  ];
+  { nome : 'mexico',
+    conteudo : [
+      {id: 1, paper: 'La Jornada', pagina: 'lajornada'},
+      {id: 1, paper: 'Reforma', pagina: 'reforma'},
+      {id: 1, paper: 'El Universal', pagina: 'eluniversalmx'},
+    ]
+  },
 
-  $scope.reinounido = [
-    {id: 1, paper: 'The Daily Mail UK', pagina: 'tdmuk'},
-    {id: 1, paper: 'Metro UK', pagina: 'metrouk'},
-    {id: 1, paper: 'BBC', pagina: 'bbc'},
-    {id: 1, paper: 'The Guardian', pagina: 'theguardian'},
-    {id: 1, paper: 'The Independent', pagina: 'theindependent'},
-  ];
+  { nome : 'reinounido',
+    conteudo : [
+      {id: 1, paper: 'The Daily Mail UK', pagina: 'tdmuk'},
+      {id: 1, paper: 'Metro UK', pagina: 'metrouk'},
+      {id: 1, paper: 'BBC', pagina: 'bbc'},
+      {id: 1, paper: 'The Guardian', pagina: 'theguardian'},
+      {id: 1, paper: 'The Independent', pagina: 'theindependent'},
+    ]
+  },
 
-  $scope.venezuela = [
-    {id: 1, paper: 'La Patilla', pagina: 'lapatilla'},
-    {id: 1, paper: 'El Universal', pagina: 'eluniversal'},
-  ];
+  { nome : 'venezuela',
+    conteudo : [{id: 1, paper: 'La Patilla', pagina: 'lapatilla'},
+    {id: 1, paper: 'El Universal', pagina: 'eluniversal'},]
+  }]
 
-  $scope.acessar = function(pagina){
-    $state.go('app.'+ pagina);
-  };
+  var buscar = function(pagina) {
+    for (var i = 0; i < listaPaises.length; i++) {
+      if (listaPaises[i].nome == pagina) {
+        return listaPaises[i];
+      }
+    }
+    return null;
+  }
+
+  $scope.selecionado = buscar($stateParams.paisSelecionado);
+
+  $scope.acessar = function(pais,pagina){
+    $location.path('/app/paises/'+pais+'/jornal/'+pagina);
+  }
 })
 
-.controller('JornalController', function($scope, $http) {
+.controller('JornalController', function($scope, $http, $stateParams, $interval) {
   $scope.g1 = [];
   $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
     $scope.g1 = response;
@@ -277,11 +308,12 @@ angular.module('starter.controllers', [])
   $scope.elmundo = [];
   $http.get('http://174.138.76.133:3000/espanha/elmundo').success(function(response){
     $scope.elmundo = response;
+
   });
 
-  $scope.lavan = [];
+  $scope.lavanguardia = [];
   $http.get('http://174.138.76.133:3000/espanha/lavanguardia').success(function(response){
-    $scope.lavan = response;
+    $scope.lavanguardia = response;
   });
 
   $scope.abcespana = [];
@@ -443,6 +475,76 @@ angular.module('starter.controllers', [])
   $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
     $scope.eluniversal = response;
   });
+
+$interval(function(){
+  $scope.listaJornais = [];
+  $scope.listaJornais[0] = {nome : "g1", conteudo : $scope.g1};
+  $scope.listaJornais[1] = {nome : "folha", conteudo : $scope.folha};
+  $scope.listaJornais[2] = {nome : "estadao", conteudo : $scope.estadao};
+  $scope.listaJornais[3] = {nome : "otempo", conteudo : $scope.otempo};
+  $scope.listaJornais[4] = {nome : "oglobo", conteudo : $scope.oglobo};
+  $scope.listaJornais[5] = {nome : "clarin", conteudo : $scope.clarin};
+  $scope.listaJornais[6] = {nome : "lanacion", conteudo : $scope.lanacion};
+  $scope.listaJornais[7] = {nome : "losandes", conteudo : $scope.losandes};
+  $scope.listaJornais[8] = {nome : "lavoz", conteudo : $scope.lavoz};
+  $scope.listaJornais[9] = {nome : "theage", conteudo : $scope.theage};
+  $scope.listaJornais[10] = {nome : "telegraph", conteudo : $scope.telegraph};
+  $scope.listaJornais[11] = {nome : "couriermail", conteudo : $scope.couriermail};
+  $scope.listaJornais[12] = {nome : "sydneyherald", conteudo : $scope.sydneyherald};
+  $scope.listaJornais[13] = {nome : "heraldsun", conteudo : $scope.heraldsun};
+  $scope.listaJornais[14] = {nome : "torontostar", conteudo : $scope.torontostar};
+  $scope.listaJornais[15] = {nome : "vancouversun", conteudo : $scope.vancouversun};
+  $scope.listaJornais[16] = {nome : "metronews", conteudo : $scope.metronews};
+  $scope.listaJornais[17] = {nome : "nationalpost", conteudo : $scope.nationalpost};
+  $scope.listaJornais[18] = {nome : "ottawacitizen", conteudo : $scope.ottawacitizen};
+  $scope.listaJornais[19] = {nome : "elpais", conteudo : $scope.elpais};
+  $scope.listaJornais[20] = {nome : "elmundo", conteudo : $scope.elmundo};
+  $scope.listaJornais[21] = {nome : "lavanguardia", conteudo : $scope.lavanguardia};
+  $scope.listaJornais[22] = {nome : "abcespana", conteudo : $scope.abcespana};
+  $scope.listaJornais[23] = {nome : "elcorreo", conteudo : $scope.elcorreo};
+  $scope.listaJornais[24] = {nome : "usatoday", conteudo : $scope.usatoday};
+  $scope.listaJornais[25] = {nome : "nyt", conteudo : $scope.nyt};
+  $scope.listaJornais[26] = {nome : "washpost", conteudo : $scope.washpost};
+  $scope.listaJornais[27] = {nome : "nydailynews", conteudo : $scope.nydailynews};
+  $scope.listaJornais[28] = {nome : "twsj", conteudo : $scope.twsj};
+  $scope.listaJornais[29] = {nome : "lemonde", conteudo : $scope.lemonde};
+  $scope.listaJornais[30] = {nome : "lefigaro", conteudo : $scope.lefigaro};
+  $scope.listaJornais[31] = {nome : "leparisien", conteudo : $scope.leparisien};
+  $scope.listaJornais[32] = {nome : "lexpressfr", conteudo : $scope.lexpressfr};
+  $scope.listaJornais[33] = {nome : "ouestfrance", conteudo : $scope.ouestfrance};
+  $scope.listaJornais[34] = {nome : "lastampa", conteudo : $scope.lastampa};
+  $scope.listaJornais[35] = {nome : "larepubblica", conteudo : $scope.larepubblica};
+  $scope.listaJornais[36] = {nome : "cds", conteudo : $scope.cds};
+  $scope.listaJornais[37] = {nome : "ilsole", conteudo : $scope.ilsole};
+  $scope.listaJornais[38] = {nome : "ilmessaggero", conteudo : $scope.ilmessaggero};
+  $scope.listaJornais[39] = {nome : "nhkonline", conteudo : $scope.nhkonline};
+  $scope.listaJornais[40] = {nome : "thejapantimes", conteudo : $scope.thejapantimes};
+  $scope.listaJornais[41] = {nome : "asianikkei", conteudo : $scope.asianikkei};
+  $scope.listaJornais[42] = {nome : "japantoday", conteudo : $scope.japantoday};
+  $scope.listaJornais[43] = {nome : "asahishimbun", conteudo : $scope.asahishimbun};
+  $scope.listaJornais[44] = {nome : "lajornada", conteudo : $scope.lajornada};
+  $scope.listaJornais[45] = {nome : "reforma", conteudo : $scope.reforma};
+  $scope.listaJornais[46] = {nome : "eluniversalmx", conteudo : $scope.eluniversalmx};
+  $scope.listaJornais[47] = {nome : "tdmuk", conteudo : $scope.tdmuk};
+  $scope.listaJornais[48] = {nome : "metrouk", conteudo : $scope.metrouk};
+  $scope.listaJornais[49] = {nome : "bbc", conteudo : $scope.bbc};
+  $scope.listaJornais[50] = {nome : "theguardian", conteudo : $scope.theguardian};
+  $scope.listaJornais[51] = {nome : "theindependent", conteudo : $scope.theindependent};
+  $scope.listaJornais[52] = {nome : "lapatilla", conteudo : $scope.lapatilla};
+  $scope.listaJornais[53] = {nome : "eluniversal", conteudo : $scope.eluniversal};
+
+  var buscar = function(pagina) {
+    for (var i = 0; i < $scope.listaJornais.length; i++) {
+      if ($scope.listaJornais[i].nome == pagina) {
+        return $scope.listaJornais[i].conteudo;
+      }
+    }
+    return null;
+  }
+
+  $scope.selecionado = buscar($stateParams.jornalSelecionado);
+
+}, 1000, 1);
 
   // função para abrir link no app
   $scope.abrirApp = function (url) {
