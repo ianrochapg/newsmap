@@ -19,6 +19,24 @@ ion-content{
 
 }
 
+#back{
+  background-image: url("../img/background-login.jpg");
+  padding-top: 300px;
+}
+
+.col{
+  padding: 32px;
+  position: relative;
+  margin-left: 30px;
+}
+
+.pagina-cadastro{
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  
+}
+
 .pagina-home img{
   width: 33%;
   margin: 20px auto;
