@@ -2,22 +2,42 @@
   <ion-content id="back" class="pagina-cadastro">
 
     <h1 class="title">Cadastro de Usuário</h1>
-
     <div class="list list-inset" id="cadastro-input">
-      <label class="item item-input">
-        <input type="text" placeholder="Nome" ng-model="dados.nome">
-      </label>
-      <label class="item item-input">
-        <input type="text" placeholder="E-mail" ng-model="dados.email">
-      </label>
-      <label class="item item-input">
-        <input type="password" placeholder="Senha" ng-model="dados.senha">
-      </label>
+      <div class="list">
+  <label class="item item-input item-floating-label">
+    <span class="input-label">First Name</span>
+    <input type="text" placeholder="First Name" ng-model="dados.nome">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Last Name</span>
+    <input type="text" placeholder="Last Name" ng-model="dados.senha">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Email</span>
+    <input type="text" placeholder="Email" ng-model="dados.email">
+  </label>
 
-      <button class="button button-block button-calm" ng-click="cadastrar()"
-      type="submit">Cadastrar</button>
-
+      <div class="list">
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Preferências
     </div>
+    <select>
+      <option>EUA</option>
+      <option selected>Brasil</option>
+      <option>Europa</option>
+      <option>Oceania</option>
+    </select>
+  </label>
+</div>
+    </div>
+  </div>
+    <div class="loginForm">
+      <button class="button button-outline button-assertive" ng-click="cadastrar()">Cadastrar</button>
+    </div>
+
+      <img src= "../img/logo2.png"  alt="logo">
+
 
   </ion-content>
 </ion-view>

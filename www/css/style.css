@@ -6,6 +6,23 @@ ion-content{
   background-color: #273347;
 }
 
+.list.list-inset{
+  background-color: #273347;
+  border-radius: 20px;
+
+}
+
+div.logo img{
+  display: block;
+  margin: auto auto 100px auto;
+}
+
+.pagina-cadastro img{
+  margin: auto;
+  height: 100px;
+  padding-top: 30px;
+}
+
 .pagina-pais h1{
   color: white;
   text-align: center;
@@ -21,7 +38,7 @@ ion-content{
 
 #back{
   background-image: url("../img/background-login.jpg");
-  padding-top: 300px;
+  padding-top: 100px;
 }
 
 .col{
@@ -34,7 +51,7 @@ ion-content{
   color: white;
   font-family: sans-serif;
   text-align: center;
-  
+
 }
 
 .pagina-home img{
