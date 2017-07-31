@@ -38,6 +38,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     templateUrl: 'templates/login.html',
     controller: 'LoginController'
   })
+  // 
+  // .state('app.login', {
+  //   url: '/login',
+  //   templateUrl: 'templates/login.html',
+  //   controller: 'Login2Controller'
+  // })
 
   .state('cadastro', {
     url: '/cadastro',
@@ -85,5 +91,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/home');
+  $urlRouterProvider.otherwise('/#/login');
 });

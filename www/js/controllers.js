@@ -32,6 +32,9 @@ angular.module('starter.controllers', [])
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 })
 
+// .controller('Login2Controller', function($scope, $ionicModal, $timeout) {
+// })
+
 .controller('LoginController', function($scope, $state, $http, Sessao) {
   $scope.data = {};
 
@@ -237,97 +240,97 @@ angular.module('starter.controllers', [])
 
 .controller('JornalController', function($scope, $http, $stateParams, $interval) {
   $scope.g1 = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/Brasil/jornais/G1/noticias').success(function(response){
     $scope.g1 = response;
   });
 
   $scope.folha = [];
-  $http.get('http://174.138.76.133:3000/brasil/folha').success(function(response){
+  $http.get('http://localhost:3000/paises/Brasil/jornais/Folha/noticias').success(function(response){
     $scope.folha = response;
   });
 
   $scope.estadao = [];
-  $http.get('http://174.138.76.133:3000/brasil/estadao').success(function(response){
+  $http.get('http://localhost:3000/paises/Brasil/jornais/Estadão/noticias').success(function(response){
     $scope.estadao = response;
   });
 
   $scope.otempo = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/Brasil/jornais/oTempo/noticias').success(function(response){
     $scope.otempo = response;
   });
 
   $scope.oglobo = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/Brasil/jornais/oGlobo/noticias').success(function(response){
     $scope.oglobo = response;
   });
 
   $scope.clarin = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/Argentina/jornais/clarin/noticias').success(function(response){
     $scope.clarin = response;
   });
 
   $scope.lanacion = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/Argentina/jornais/la_nacion/noticias').success(function(response){
     $scope.lanacion = response;
   });
 
   $scope.losandes = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/Argentina/jornais/los_andes/noticias').success(function(response){
     $scope.losandes = response;
   });
 
   $scope.lavoz = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/Argentina/jornais/la_voz/noticias').success(function(response){
     $scope.lavoz = response;
   });
 
   $scope.theage = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/Australia/jornais/the_age/noticias').success(function(response){
     $scope.theage = response;
   });
 
   $scope.telegraph = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/Australia/jornais/daily_telegraph/noticias').success(function(response){
     $scope.telegraph = response;
   });
 
   $scope.couriermail = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/Australia/jornais/courier_mail/noticias').success(function(response){
     $scope.couriermail = response;
   });
 
   $scope.sydneyherald = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/Australia/jornais/the_sydney_morning_herald/noticias').success(function(response){
     $scope.sydneyherald = response;
   });
 
   $scope.heraldsun = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/Australia/jornais/herald_sun/noticias').success(function(response){
     $scope.heraldsun = response;
   });
 
   $scope.torontostar = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/Canada/jornais/toronto_star/noticias').success(function(response){
     $scope.torontostar = response;
   });
 
   $scope.vancouversun = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/Canada/jornais/vancouver_sun/noticias').success(function(response){
     $scope.vancouversun = response;
   });
 
   $scope.metronews = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/Canada/jornais/metro_news_canada/noticias').success(function(response){
     $scope.metronews = response;
   });
 
   $scope.nationalpost = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/Canada/jornais/national_post/noticias').success(function(response){
     $scope.nationalpost = response;
   });
 
   $scope.ottawacitizen = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/Canada/jornais/ottawa_citizen/noticias').success(function(response){
     $scope.ottawacitizen = response;
   });
 
@@ -574,7 +577,7 @@ $interval(function(){
   }
 
   $scope.selecionado = buscar($stateParams.jornalSelecionado);
-
+console.log($scope.selecionado);
 }, 1000, 1);
 
   // função para abrir link no app
