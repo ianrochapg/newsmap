@@ -67,6 +67,10 @@ angular.module('starter.controllers', [])
       console.log("Cadastro ok!")
     })
   }
+  $scope.cancelar = function() {
+    $state.go("app.home");
+
+  }
 })
 
 .controller('HomeController', function($scope, $state, $location) {
