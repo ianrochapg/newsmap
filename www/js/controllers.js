@@ -364,53 +364,53 @@ angular.module('starter.controllers', [])
   //   $scope.elcorreo = response;
   // });
 
-  $scope.nyt = [];
-  $http.get('http://localhost:3000/paises/Espanha/jornais/abc_espana/noticias').success(function(response){
-    $scope.nyt = response;
-  });
+  // $scope.nyt = [];
+  // $http.get('http://localhost:3000/paises/eua/jornais/abc_espana/noticias').success(function(response){
+  //   $scope.nyt = response;
+  // });
 
   $scope.nydailynews = [];
-  $http.get('http://174.138.76.133:3000/eua/california').success(function(response){
+  $http.get('http://localhost:3000/paises/eua/jornais/nydaily/noticias').success(function(response){
     $scope.nydailynews = response;
   });
 
   $scope.washpost = [];
-  $http.get('http://174.138.76.133:3000/eua/washpost').success(function(response){
+  $http.get('http://localhost:3000/paises/eua/jornais/washpost/noticias').success(function(response){
     $scope.washpost = response;
   });
 
   $scope.usatoday = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/eua/jornais/usatoday/noticias').success(function(response){
     $scope.usatoday = response;
   });
 
   $scope.twsj = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/eua/jornais/wallstreet/noticias').success(function(response){
     $scope.twsj = response;
   });
 
   $scope.lemonde = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/franca/jornais/lemonde/noticias').success(function(response){
     $scope.lemonde = response;
   });
 
   $scope.lefigaro = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/franca/jornais/figaro/noticias').success(function(response){
     $scope.lefigaro = response;
   });
 
   $scope.leparisien = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/franca/jornais/le_parisien/noticias').success(function(response){
     $scope.leparisien = response;
   });
 
   $scope.lexpressfr = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/franca/jornais/leexpress/noticias').success(function(response){
     $scope.lexpressfr = response;
   });
 
   $scope.ouestfrance = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/franca/jornais/ouestfrance/noticias').success(function(response){
     $scope.ouestfrance = response;
   });
 
@@ -438,81 +438,81 @@ angular.module('starter.controllers', [])
   $http.get('http://localhost:3000/paises/Italia/jornais/il_messaggero/noticias').success(function(response){
     $scope.ilmessaggero = response;
   });
-
-  $scope.nhkonline = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
-    $scope.nhkonline = response;
-  });
-
-  $scope.thejapantimes = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
-    $scope.thejapantimes = response;
-  });
-
-  $scope.asianikkei = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
-    $scope.asianikkei = response;
-  });
-
-  $scope.japantoday = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
-    $scope.japantoday = response;
-  });
-
-  $scope.asahishimbun = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
-    $scope.asahishimbun = response;
-  });
+  //
+  // $scope.nhkonline = [];
+  // $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  //   $scope.nhkonline = response;
+  // });
+  //
+  // $scope.thejapantimes = [];
+  // $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  //   $scope.thejapantimes = response;
+  // });
+  //
+  // $scope.asianikkei = [];
+  // $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  //   $scope.asianikkei = response;
+  // });
+  //
+  // $scope.japantoday = [];
+  // $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  //   $scope.japantoday = response;
+  // });
+  //
+  // $scope.asahishimbun = [];
+  // $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  //   $scope.asahishimbun = response;
+  // });
 
   $scope.lajornada = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/mexico/jornais/la_jornada/noticias').success(function(response){
     $scope.lajornada = response;
   });
 
   $scope.reforma = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/mexico/jornais/reforma/noticias').success(function(response){
     $scope.reforma = response;
   });
 
   $scope.eluniversalmx = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  $http.get('http://localhost:3000/paises/mexico/jornais/el_universal/noticias').success(function(response){
     $scope.eluniversalmx = response;
   });
 
   $scope.tdmuk = [];
-  $http.get('http://localhost:3000/paises/ReinoUnido/jornais/the_dailynailUK/noticias').success(function(response){
+  $http.get('http://localhost:3000/paises/reinounido/jornais/thedailymailUK/noticias').success(function(response){
     $scope.tdmuk = response;
   });
 
   $scope.metrouk = [];
-  $http.get('http://localhost:3000/paises/ReinoUnido/jornais/metroUK/noticias').success(function(response){
+  $http.get('http://localhost:3000/paises/reinounido/jornais/metro_uk/noticias').success(function(response){
     $scope.metrouk = response;
   });
 
   $scope.bbc = [];
-  $http.get('http://localhost:3000/paises/ReinoUnido/jornais/bbc/noticias').success(function(response){
+  $http.get('http://localhost:3000/paises/reinounido/jornais/bbc/noticias').success(function(response){
     $scope.bbc = response;
   });
 
   $scope.theguardian = [];
-  $http.get('http://localhost:3000/paises/ReinoUnido/jornais/the_guardian/noticias').success(function(response){
+  $http.get('http://localhost:3000/paises/reinounido/jornais/the_guardian/noticias').success(function(response){
     $scope.theguardian = response;
   });
 
-  $scope.theindependent = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
-    $scope.theindependent = response;
-  });
-
-  $scope.lapatilla = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
-    $scope.lapatilla = response;
-  });
-
-  $scope.eluniversal = [];
-  $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
-    $scope.eluniversal = response;
-  });
+  // $scope.theindependent = [];
+  // $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  //   $scope.theindependent = response;
+  // });
+  // 
+  // $scope.lapatilla = [];
+  // $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  //   $scope.lapatilla = response;
+  // });
+  //
+  // $scope.eluniversal = [];
+  // $http.get('http://174.138.76.133:3000/brasil/g1').success(function(response){
+  //   $scope.eluniversal = response;
+  // });
 
 $interval(function(){
   $scope.listaJornais = [];
